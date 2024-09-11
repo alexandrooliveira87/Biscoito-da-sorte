@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { View, Text, SafeAreaView, StatusBar, Button } from "react-native";
+import codegenNativeComponent from "react-native/Libraries/Utilities/codegenNativeComponent";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends Component {
+
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      nome:''
+        };
+    this.entrar = this.entrar.bind(this);
+  }
+
+  entrar = (nome) => {
+    this.setState({ nome: nome });
+  }
+
+
+  render() {
+    return (
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar barStyle="dark-content" />
+
+        <View style={{ marginTop: 20 }}>
+
+          <Button title= "Entrar" onPress={ () => this.entrar('Alexandro') } />
+
+          <Text style={{ fontSize: 25, color: 'red', textAlign: 'center' }}>{this.state.nome}</Text>
+        </View>
+
+
+
+
+
+
+
+
+      </SafeAreaView>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
