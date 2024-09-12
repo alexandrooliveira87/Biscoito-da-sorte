@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
     textoFrase:{
     fontSize: 20,
-    color: '#dd7b22',
+    color: '#B19Cd9',
     margin:30,
     fontStyle:'italic',
     textAlign: 'center'
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderWidth: 2,
     borderRadius: 25,
-    borderColor: '#dd7b22',
+    borderColor: '#B19Cd9',
     alignItems: 'center',
     justifyContent: 'center',
 
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   btnTexto:{
     fontSize: 18,
-    color: '#dd7b22',
+    color: '#B19Cd9',
     fontWeight: 'bold'
   }
 
